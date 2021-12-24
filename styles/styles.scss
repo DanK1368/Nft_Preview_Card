@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+$main-font: "Outfit", sans-serif;
+$header: 2.5rem;
+$text: 1.8rem;
+$special-color: hsl(178, 100%, 50%);
+$special-color-2: hsl(0, 0%, 100%);
+$primary-color: hsl(215, 51%, 70%);
+$main-bg: hsl(217, 54%, 11%);
+$card-bg: hsl(216, 50%, 16%);
+$line-color: hsl(215, 32%, 27%);
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  font-family: $main-font;
+  font-size: $text;
+}
+
+hr {
+  background: $line-color;
+  height: 2px;
+  width: 85%;
+  margin: auto;
+  border: none;
+}
+
+.nft-card {
+  padding: 1rem;
+  min-height: 100vh;
+  background: $main-bg;
+  @include flex(column, center, center);
+}
+
+.main-card-container {
+  width: 30%;
+  margin: auto;
+  min-height: 70rem;
+  @include flex(column, center, flex-start);
+  background: $card-bg;
+  border-radius: 10px;
+  h2 {
+    color: $special-color-2;
+  }
+  p {
+    color: $primary-color;
+  }
+}
+
+.image-container {
+  @include flex(row, center, center);
+  padding: 3rem 0rem;
+  width: 85%;
+  margin: auto;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.info-container {
+  padding-top: 2rem;
+  width: 85%;
+  margin: auto;
+  p {
+    padding-top: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+.stats-container {
+  padding: 2rem 0rem;
+  width: 85%;
+  margin: auto;
+  @include flex(row, space-between, center);
+}
+
+.creator-container {
+  padding: 2rem 0rem;
+  width: 85%;
+  margin: auto;
+  @include flex(row, flex-start, center);
+  img {
+    margin-right: 2rem;
+    width: 5rem;
+    border-radius: 100%;
+    outline: 2px solid white;
+  }
+  p span {
+    color: $special-color-2;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .main-card-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .main-card-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 522px) {
+  .main-card-container {
+    width: 90%;
+  }
+  h2,
+  p {
+    text-align: center;
+  }
+
+  .creator-container {
+    font-size: 80%;
+  }
+}
