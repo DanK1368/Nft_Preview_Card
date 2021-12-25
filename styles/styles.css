@@ -43,7 +43,7 @@ hr {
 }
 
 .main-card-container {
-  width: 30%;
+  width: 32rem;
   margin: auto;
   min-height: 70rem;
   display: -webkit-box;
@@ -63,7 +63,7 @@ hr {
   border-radius: 10px;
 }
 
-.main-card-container h2 {
+.main-card-container h1 {
   color: white;
 }
 
@@ -85,9 +85,43 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem 0rem;
   width: 85%;
   margin: auto;
+  position: relative;
+}
+
+.image-container::before {
+  content: "";
+  background: url(/images/icon-view.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.image-container::after {
+  content: "";
+  background: #00fff7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.image-container:hover::before {
+  opacity: 0.5;
+}
+
+.image-container:hover::after {
+  opacity: 0.5;
 }
 
 .image-container img {
@@ -101,13 +135,17 @@ hr {
   margin: auto;
 }
 
+.info-container h1:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
 .info-container p {
   padding-top: 2rem;
   line-height: 2.5rem;
 }
 
 .stats-container {
-  padding: 2rem 0rem;
   width: 85%;
   margin: auto;
   display: -webkit-box;
@@ -126,7 +164,6 @@ hr {
 }
 
 .creator-container {
-  padding: 2rem 0rem;
   width: 85%;
   margin: auto;
   display: -webkit-box;
@@ -155,28 +192,20 @@ hr {
   color: white;
 }
 
-@media screen and (max-width: 870px) {
+.creator-container p span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 870px) {
   .main-card-container {
-    width: 40%;
+    width: 37rem;
   }
 }
 
-@media screen and (max-width: 653px) {
+@media screen and (min-width: 320px) {
   .main-card-container {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 522px) {
-  .main-card-container {
-    width: 90%;
-  }
-  h2,
-  p {
-    text-align: center;
-  }
-  .creator-container {
-    font-size: 80%;
+    width: 30rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
