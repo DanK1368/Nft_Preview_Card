@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](images\screenshot.png)
+![](/Nft_Preview_Card/images/screenshot.png)
 
 ### Links
 
