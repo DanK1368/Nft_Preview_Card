@@ -68,7 +68,7 @@ hr {
 
   &::before {
     content: "";
-    background: url(images/icon-view.svg);
+    background: url(images\icon-view.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -156,23 +156,3 @@ hr {
     font-size: 90%;
   }
 }
-
-// @media screen and (max-width: 653px) {
-//   .main-card-container {
-//     width: 50%;
-//   }
-// }
-
-// @media screen and (max-width: 522px) {
-//   .main-card-container {
-//     width: 90%;
-//   }
-//   h2,
-//   p {
-//     text-align: center;
-//   }
-
-//   .creator-container {
-//     font-size: 80%;
-//   }
-// }
